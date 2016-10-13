@@ -15,10 +15,62 @@
 		6E348E5B1DA4B49A003F70A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E348E5A1DA4B49A003F70A8 /* Assets.xcassets */; };
 		6E348E5E1DA4B49A003F70A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E348E5C1DA4B49A003F70A8 /* LaunchScreen.storyboard */; };
 		6E348E661DA4B4CA003F70A8 /* SecEdgarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E348E651DA4B4CA003F70A8 /* SecEdgarClient.swift */; };
+		6E7A1FF01DAED58500FEB7CE /* DebtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A1FEF1DAED58500FEB7CE /* DebtViewController.swift */; };
+		6E7A1FF21DAED85F00FEB7CE /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A1FF11DAED85F00FEB7CE /* MarketViewController.swift */; };
+		6E7A1FF41DAED88100FEB7CE /* LiquidityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A1FF31DAED88100FEB7CE /* LiquidityViewController.swift */; };
+		6E7A1FF61DAED8AB00FEB7CE /* ProfitabilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A1FF51DAED8AB00FEB7CE /* ProfitabilityViewController.swift */; };
+		6E7A1FF81DAED8CE00FEB7CE /* StockValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A1FF71DAED8CE00FEB7CE /* StockValueViewController.swift */; };
+		6E7A20051DAF2A2E00FEB7CE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7A20001DAF29F400FEB7CE /* Charts.framework */; };
+		6E7A20061DAF2A2E00FEB7CE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7A20001DAF29F400FEB7CE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E9457DD1DAC2B21004C5F52 /* FinRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9457DC1DAC2B21004C5F52 /* FinRatio.swift */; };
 		6E9457DF1DAC64B5004C5F52 /* IntrinsicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9457DE1DAC64B5004C5F52 /* IntrinsicValue.swift */; };
 		6ED9C41D1DADF231007C75D4 /* SearchStockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED9C41C1DADF231007C75D4 /* SearchStockTableViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E7A1FFF1DAF29F400FEB7CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E7A1FF91DAF29F300FEB7CE /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		6E7A20011DAF29F400FEB7CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E7A1FF91DAF29F300FEB7CE /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		6E7A20031DAF29F400FEB7CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E7A1FF91DAF29F300FEB7CE /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		6E7A20071DAF2A2E00FEB7CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E7A1FF91DAF29F300FEB7CE /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 06165F231D8110E600722320;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E7A20091DAF2A2E00FEB7CE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6E7A20061DAF2A2E00FEB7CE /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6E10A96E1DA5C41800544835 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -31,6 +83,12 @@
 		6E348E5D1DA4B49A003F70A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E348E5F1DA4B49A003F70A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E348E651DA4B4CA003F70A8 /* SecEdgarClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecEdgarClient.swift; sourceTree = "<group>"; };
+		6E7A1FEF1DAED58500FEB7CE /* DebtViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtViewController.swift; sourceTree = "<group>"; };
+		6E7A1FF11DAED85F00FEB7CE /* MarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
+		6E7A1FF31DAED88100FEB7CE /* LiquidityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidityViewController.swift; sourceTree = "<group>"; };
+		6E7A1FF51DAED8AB00FEB7CE /* ProfitabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitabilityViewController.swift; sourceTree = "<group>"; };
+		6E7A1FF71DAED8CE00FEB7CE /* StockValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockValueViewController.swift; sourceTree = "<group>"; };
+		6E7A1FF91DAF29F300FEB7CE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		6E9457DC1DAC2B21004C5F52 /* FinRatio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinRatio.swift; sourceTree = "<group>"; };
 		6E9457DE1DAC64B5004C5F52 /* IntrinsicValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntrinsicValue.swift; sourceTree = "<group>"; };
 		6ED9C41C1DADF231007C75D4 /* SearchStockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchStockTableViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7A20051DAF2A2E00FEB7CE /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +133,28 @@
 				6E9457DC1DAC2B21004C5F52 /* FinRatio.swift */,
 				6E9457DE1DAC64B5004C5F52 /* IntrinsicValue.swift */,
 				6E348E571DA4B49A003F70A8 /* Main.storyboard */,
+				6E7A1FF71DAED8CE00FEB7CE /* StockValueViewController.swift */,
+				6E7A1FF51DAED8AB00FEB7CE /* ProfitabilityViewController.swift */,
+				6E7A1FF31DAED88100FEB7CE /* LiquidityViewController.swift */,
+				6E7A1FF11DAED85F00FEB7CE /* MarketViewController.swift */,
+				6E7A1FEF1DAED58500FEB7CE /* DebtViewController.swift */,
 				6ED9C41C1DADF231007C75D4 /* SearchStockTableViewController.swift */,
 				6E348E5A1DA4B49A003F70A8 /* Assets.xcassets */,
 				6E348E5C1DA4B49A003F70A8 /* LaunchScreen.storyboard */,
 				6E348E5F1DA4B49A003F70A8 /* Info.plist */,
+				6E7A1FF91DAF29F300FEB7CE /* Charts.xcodeproj */,
 			);
 			path = StockApi;
+			sourceTree = "<group>";
+		};
+		6E7A1FFA1DAF29F300FEB7CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E7A20001DAF29F400FEB7CE /* Charts.framework */,
+				6E7A20021DAF29F400FEB7CE /* ChartsRealm.framework */,
+				6E7A20041DAF29F400FEB7CE /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,10 +167,12 @@
 				6E348E4C1DA4B49A003F70A8 /* Sources */,
 				6E348E4D1DA4B49A003F70A8 /* Frameworks */,
 				6E348E4E1DA4B49A003F70A8 /* Resources */,
+				6E7A20091DAF2A2E00FEB7CE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6E7A20081DAF2A2E00FEB7CE /* PBXTargetDependency */,
 			);
 			name = StockApi;
 			productName = StockApi;
@@ -129,12 +206,42 @@
 			mainGroup = 6E348E471DA4B49A003F70A8;
 			productRefGroup = 6E348E511DA4B49A003F70A8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6E7A1FFA1DAF29F300FEB7CE /* Products */;
+					ProjectRef = 6E7A1FF91DAF29F300FEB7CE /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6E348E4F1DA4B49A003F70A8 /* StockApi */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6E7A20001DAF29F400FEB7CE /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 6E7A1FFF1DAF29F400FEB7CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E7A20021DAF29F400FEB7CE /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 6E7A20011DAF29F400FEB7CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E7A20041DAF29F400FEB7CE /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 6E7A20031DAF29F400FEB7CE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6E348E4E1DA4B49A003F70A8 /* Resources */ = {
@@ -154,18 +261,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E7A1FF01DAED58500FEB7CE /* DebtViewController.swift in Sources */,
 				6ED9C41D1DADF231007C75D4 /* SearchStockTableViewController.swift in Sources */,
+				6E7A1FF21DAED85F00FEB7CE /* MarketViewController.swift in Sources */,
+				6E7A1FF61DAED8AB00FEB7CE /* ProfitabilityViewController.swift in Sources */,
 				6E348E561DA4B49A003F70A8 /* ViewController.swift in Sources */,
 				6E9457DD1DAC2B21004C5F52 /* FinRatio.swift in Sources */,
 				6E348E661DA4B4CA003F70A8 /* SecEdgarClient.swift in Sources */,
 				6E9457DF1DAC64B5004C5F52 /* IntrinsicValue.swift in Sources */,
+				6E7A1FF81DAED8CE00FEB7CE /* StockValueViewController.swift in Sources */,
 				6E348E541DA4B49A003F70A8 /* AppDelegate.swift in Sources */,
 				6E10A9711DA619A300544835 /* Stock.swift in Sources */,
 				6E10A96F1DA5C41800544835 /* Constants.swift in Sources */,
+				6E7A1FF41DAED88100FEB7CE /* LiquidityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E7A20081DAF2A2E00FEB7CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 6E7A20071DAF2A2E00FEB7CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6E348E571DA4B49A003F70A8 /* Main.storyboard */ = {
@@ -283,6 +403,7 @@
 		6E348E631DA4B49A003F70A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StockApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -295,6 +416,7 @@
 		6E348E641DA4B49A003F70A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StockApi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

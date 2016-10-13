@@ -12,12 +12,12 @@ struct DividendGrowthModel {
     
     let intrinsicValue10: Double
 
-    init?(financialRatio: parsedFinRatioCompany, dr: Double){
+    init?(financialRatio: ParsedFinRatioCompany, dr: Double){
         
         guard let dividends = financialRatio.Dividends else {
             return nil
         }
-        
+        //WARNING NOT ALL COMPANIES HAS DIVIDENDS
         let firstDiv = dividends.historical["2006"]
         let secondDiv = dividends.historical["2015"]
         let base = Double(secondDiv!)/firstDiv!

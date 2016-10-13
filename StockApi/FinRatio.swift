@@ -39,7 +39,7 @@ struct FinRatio {
     }
 }
 
-struct parsedFinRatioCompany {
+struct ParsedFinRatioCompany {
     
     let BookValuePerShare: FinRatio?
     let CurrentRatio: FinRatio?

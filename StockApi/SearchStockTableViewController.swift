@@ -14,10 +14,13 @@ class SearchStockTableViewController: UITableViewController {
     var selectedStocks: [Stock] = [Stock]()
     var searchController: UISearchController!
     var resultsController = UITableViewController()
+    var controller: UITabBarController!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //controller = self.storyboard!.instantiateViewController(withIdentifier: "ChartsTabBarController") as! UITabBarController
+        
         
         self.resultsController.tableView.dataSource = self
         self.resultsController.tableView.delegate = self
@@ -44,9 +47,13 @@ class SearchStockTableViewController: UITableViewController {
             let stock = selectedStocks[indexPath.row]
             cell.textLabel?.text = stock.name
             //cell?.detailTextLabel?.text = stock.name
+            let object = UIApplication.shared.delegate
+            let appDelegate = object as! AppDelegate
+            appDelegate.currentStock = "ABC"
             return cell
         } else {
             let cell = UITableViewCell()
+            //having error here, sometimes Index out of range
             let stock = stockList[indexPath.row]
             cell.textLabel?.text = stock.name
             //cell.detailTextLabel?.text = stock.name
@@ -58,7 +65,21 @@ class SearchStockTableViewController: UITableViewController {
     // MARK: Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView == self.tableView {
-            print("indexPath is \(indexPath)")
+            //print("indexPath is \(indexPath)")
+            //self.present(controller, animated: true, completion: nil)
+            
+            //download fin data here
+            //getting error here too
+            let stock = stockList[indexPath.row]
+            SecEdgarHelper.sharedInstance().sampleTaskforSecFiling(ticker: stock.ticker){ success in
+                DispatchQueue.main.async {
+                    //add loading activity indicator here
+                    self.performSegue(withIdentifier: "vctotabbar", sender: nil)
+                }
+                
+            }
+            
+            
         } else {
             let stock = stockList[indexPath.row]
             //if stock not in selected yet then append
@@ -68,6 +89,18 @@ class SearchStockTableViewController: UITableViewController {
             }
         }
     }
+    
+    //segue
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "vctotabbar" {
+//            let controller = segue.destination
+//            controller.StockFin = "haha"
+//        
+//        }
+//        
+//    }
+    
+    
 }
 
 extension SearchStockTableViewController: UISearchResultsUpdating {

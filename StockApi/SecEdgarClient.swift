@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class SecEdgarHelper: NSObject {
     
@@ -100,13 +101,19 @@ class SecEdgarHelper: NSObject {
         let parsedResult = try? JSONSerialization.jsonObject(with: data as Data, options: .allowFragments)
 
         if let dictionary = parsedResult as? [String: Any] {
-            let financialRatio = parsedFinRatioCompany(dictionary: dictionary)
-            print(DividendGrowthModel(financialRatio: financialRatio!, dr: 0.10))
+            let financialRatio = ParsedFinRatioCompany(dictionary: dictionary)
+            //print(DividendGrowthModel(financialRatio: financialRatio!, dr: 0.10))
+            let object = UIApplication.shared.delegate
+            let appDelegate = object as! AppDelegate
+            appDelegate.companyFin = financialRatio
+            //posting notification, which I might not need
+            //NotificationCenter.default.post(name: NSNotification.Name(rawValue: "successRequest"), object: self)
+            
         }
     
     
     }
-    func sampleTaskforSecFiling(ticker: String) {
+    func sampleTaskforSecFiling(ticker: String, completion: @escaping (Bool)->Void) {
         
         let tkConstant = LastTenKC(ticker: ticker)
         let url = URLFromParameters(parameters: nil, constant: tkConstant)
@@ -123,6 +130,7 @@ class SecEdgarHelper: NSObject {
                 //parse data here
                 self.parseSecData(data: data)
                 //print(NSString(data: data, encoding: String.Encoding.utf8.rawValue))
+                completion(true)
             }
         }
     
