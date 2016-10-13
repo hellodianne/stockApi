@@ -22,6 +22,7 @@
 		6E7A1FF81DAED8CE00FEB7CE /* StockValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A1FF71DAED8CE00FEB7CE /* StockValueViewController.swift */; };
 		6E7A20051DAF2A2E00FEB7CE /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7A20001DAF29F400FEB7CE /* Charts.framework */; };
 		6E7A20061DAF2A2E00FEB7CE /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7A20001DAF29F400FEB7CE /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E7A20101DB006A500FEB7CE /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7A200F1DB006A500FEB7CE /* ChartHelper.swift */; };
 		6E9457DD1DAC2B21004C5F52 /* FinRatio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9457DC1DAC2B21004C5F52 /* FinRatio.swift */; };
 		6E9457DF1DAC64B5004C5F52 /* IntrinsicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9457DE1DAC64B5004C5F52 /* IntrinsicValue.swift */; };
 		6ED9C41D1DADF231007C75D4 /* SearchStockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED9C41C1DADF231007C75D4 /* SearchStockTableViewController.swift */; };
@@ -89,6 +90,7 @@
 		6E7A1FF51DAED8AB00FEB7CE /* ProfitabilityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitabilityViewController.swift; sourceTree = "<group>"; };
 		6E7A1FF71DAED8CE00FEB7CE /* StockValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockValueViewController.swift; sourceTree = "<group>"; };
 		6E7A1FF91DAF29F300FEB7CE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		6E7A200F1DB006A500FEB7CE /* ChartHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
 		6E9457DC1DAC2B21004C5F52 /* FinRatio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinRatio.swift; sourceTree = "<group>"; };
 		6E9457DE1DAC64B5004C5F52 /* IntrinsicValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntrinsicValue.swift; sourceTree = "<group>"; };
 		6ED9C41C1DADF231007C75D4 /* SearchStockTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchStockTableViewController.swift; sourceTree = "<group>"; };
@@ -127,19 +129,10 @@
 			children = (
 				6E348E531DA4B49A003F70A8 /* AppDelegate.swift */,
 				6E348E551DA4B49A003F70A8 /* ViewController.swift */,
-				6E348E651DA4B4CA003F70A8 /* SecEdgarClient.swift */,
-				6E10A96E1DA5C41800544835 /* Constants.swift */,
-				6E10A9701DA619A300544835 /* Stock.swift */,
-				6E9457DC1DAC2B21004C5F52 /* FinRatio.swift */,
-				6E9457DE1DAC64B5004C5F52 /* IntrinsicValue.swift */,
-				6E348E571DA4B49A003F70A8 /* Main.storyboard */,
-				6E7A1FF71DAED8CE00FEB7CE /* StockValueViewController.swift */,
-				6E7A1FF51DAED8AB00FEB7CE /* ProfitabilityViewController.swift */,
-				6E7A1FF31DAED88100FEB7CE /* LiquidityViewController.swift */,
-				6E7A1FF11DAED85F00FEB7CE /* MarketViewController.swift */,
-				6E7A1FEF1DAED58500FEB7CE /* DebtViewController.swift */,
-				6ED9C41C1DADF231007C75D4 /* SearchStockTableViewController.swift */,
+				6E7A20151DB0099C00FEB7CE /* Models */,
+				6E7A20141DB0097100FEB7CE /* ViewControllers */,
 				6E348E5A1DA4B49A003F70A8 /* Assets.xcassets */,
+				6E348E571DA4B49A003F70A8 /* Main.storyboard */,
 				6E348E5C1DA4B49A003F70A8 /* LaunchScreen.storyboard */,
 				6E348E5F1DA4B49A003F70A8 /* Info.plist */,
 				6E7A1FF91DAF29F300FEB7CE /* Charts.xcodeproj */,
@@ -155,6 +148,40 @@
 				6E7A20041DAF29F400FEB7CE /* ChartsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6E7A20131DB0092E00FEB7CE /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				6E9457DE1DAC64B5004C5F52 /* IntrinsicValue.swift */,
+				6E9457DC1DAC2B21004C5F52 /* FinRatio.swift */,
+				6E10A9701DA619A300544835 /* Stock.swift */,
+				6E10A96E1DA5C41800544835 /* Constants.swift */,
+			);
+			name = DataTypes;
+			sourceTree = "<group>";
+		};
+		6E7A20141DB0097100FEB7CE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6ED9C41C1DADF231007C75D4 /* SearchStockTableViewController.swift */,
+				6E7A1FEF1DAED58500FEB7CE /* DebtViewController.swift */,
+				6E7A1FF11DAED85F00FEB7CE /* MarketViewController.swift */,
+				6E7A1FF31DAED88100FEB7CE /* LiquidityViewController.swift */,
+				6E7A1FF51DAED8AB00FEB7CE /* ProfitabilityViewController.swift */,
+				6E7A1FF71DAED8CE00FEB7CE /* StockValueViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6E7A20151DB0099C00FEB7CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E7A200F1DB006A500FEB7CE /* ChartHelper.swift */,
+				6E348E651DA4B4CA003F70A8 /* SecEdgarClient.swift */,
+				6E7A20131DB0092E00FEB7CE /* DataTypes */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +292,7 @@
 				6ED9C41D1DADF231007C75D4 /* SearchStockTableViewController.swift in Sources */,
 				6E7A1FF21DAED85F00FEB7CE /* MarketViewController.swift in Sources */,
 				6E7A1FF61DAED8AB00FEB7CE /* ProfitabilityViewController.swift in Sources */,
+				6E7A20101DB006A500FEB7CE /* ChartHelper.swift in Sources */,
 				6E348E561DA4B49A003F70A8 /* ViewController.swift in Sources */,
 				6E9457DD1DAC2B21004C5F52 /* FinRatio.swift in Sources */,
 				6E348E661DA4B4CA003F70A8 /* SecEdgarClient.swift in Sources */,

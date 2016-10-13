@@ -7,29 +7,31 @@
 //
 
 import UIKit
+import Charts
 
 class MarketViewController: UIViewController {
 
+    var StockFin: ParsedFinRatioCompany!
+    
+    @IBOutlet weak var lineChart: LineChartView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        StockFin = appDelegate.companyFin
+        
+        let GrossMargin = StockFin.GrossMargin
+        print(GrossMargin?.historical)
+        //print(GrossMargin)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //setChart()
+        ChartHelper.sharedInstance().setChart(company: StockFin.GrossMargin!, label: "Gross Margin", lineChart: lineChart)
     }
-    */
 
 }

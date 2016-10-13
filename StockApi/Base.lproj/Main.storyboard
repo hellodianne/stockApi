@@ -50,9 +50,23 @@
                     <view key="view" contentMode="scaleToFill" id="70t-mR-rY8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMc-by-KZr" customClass="LineChartView" customModule="Charts">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dMc-by-KZr" firstAttribute="trailing" secondItem="70t-mR-rY8" secondAttribute="trailingMargin" id="6Nh-YM-ruB"/>
+                            <constraint firstItem="NlQ-US-zvx" firstAttribute="top" secondItem="dMc-by-KZr" secondAttribute="bottom" constant="241" id="NqI-iR-4J6"/>
+                            <constraint firstItem="dMc-by-KZr" firstAttribute="leading" secondItem="70t-mR-rY8" secondAttribute="leadingMargin" id="UJb-7T-Awm"/>
+                            <constraint firstItem="dMc-by-KZr" firstAttribute="top" secondItem="GPT-OD-tFF" secondAttribute="bottom" constant="22" id="xR5-vU-VDw"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Market" id="2ey-QE-SVm"/>
+                    <connections>
+                        <outlet property="lineChart" destination="dMc-by-KZr" id="d6g-o7-cfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6k-fb-dn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,9 +90,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="WfA-h8-lOj" firstAttribute="top" secondItem="Ug2-H6-Tt2" secondAttribute="bottom" constant="268" id="43P-Xi-Qb0"/>
+                            <constraint firstItem="WfA-h8-lOj" firstAttribute="top" secondItem="Ug2-H6-Tt2" secondAttribute="bottom" constant="246" id="43P-Xi-Qb0"/>
                             <constraint firstItem="Ug2-H6-Tt2" firstAttribute="leading" secondItem="HfJ-if-h2X" secondAttribute="leadingMargin" id="7J5-s7-W5E"/>
-                            <constraint firstItem="Ug2-H6-Tt2" firstAttribute="top" secondItem="pzu-5R-m99" secondAttribute="bottom" id="Nro-sy-RDP"/>
+                            <constraint firstItem="Ug2-H6-Tt2" firstAttribute="top" secondItem="pzu-5R-m99" secondAttribute="bottom" constant="22" id="Nro-sy-RDP"/>
                             <constraint firstItem="Ug2-H6-Tt2" firstAttribute="trailing" secondItem="HfJ-if-h2X" secondAttribute="trailingMargin" id="WgN-NF-822"/>
                         </constraints>
                     </view>
@@ -103,9 +117,23 @@
                     <view key="view" contentMode="scaleToFill" id="xX4-oX-X3p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CWj-QO-oUx" customClass="LineChartView" customModule="Charts">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CWj-QO-oUx" firstAttribute="trailing" secondItem="xX4-oX-X3p" secondAttribute="trailingMargin" id="2IV-h5-jU5"/>
+                            <constraint firstItem="CWj-QO-oUx" firstAttribute="leading" secondItem="xX4-oX-X3p" secondAttribute="leadingMargin" id="54J-5G-l0f"/>
+                            <constraint firstItem="CWj-QO-oUx" firstAttribute="top" secondItem="YTR-wQ-dVb" secondAttribute="bottom" constant="22" id="6Yh-Yj-Ueq"/>
+                            <constraint firstItem="j1B-Zy-Hre" firstAttribute="top" secondItem="CWj-QO-oUx" secondAttribute="bottom" constant="244" id="W3N-fR-ueE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Liquidity" id="eyF-hj-IPt"/>
+                    <connections>
+                        <outlet property="lineChart" destination="CWj-QO-oUx" id="Kof-vP-PrM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnK-Tc-Nn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +150,18 @@
                     <view key="view" contentMode="scaleToFill" id="HbE-lr-8cG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAl-fD-mZJ" customClass="LineChartView" customModule="Charts">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WAl-fD-mZJ" firstAttribute="top" secondItem="nsD-g9-WuB" secondAttribute="bottom" constant="23" id="6Nq-UQ-kpH"/>
+                            <constraint firstItem="WAl-fD-mZJ" firstAttribute="trailing" secondItem="HbE-lr-8cG" secondAttribute="trailingMargin" id="6Y7-aQ-U6C"/>
+                            <constraint firstItem="XHB-Q4-ZXO" firstAttribute="top" secondItem="WAl-fD-mZJ" secondAttribute="bottom" constant="243" id="Mkx-iE-BSO"/>
+                            <constraint firstItem="WAl-fD-mZJ" firstAttribute="leading" secondItem="HbE-lr-8cG" secondAttribute="leadingMargin" id="dYZ-0Q-y1D"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Value" id="OEm-0P-yl4"/>
                 </viewController>
@@ -162,9 +201,23 @@
                     <view key="view" contentMode="scaleToFill" id="cZ3-W0-tZq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WrT-6w-Lxq" customClass="LineChartView" customModule="Charts">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.80741906949999998" blue="0.073107882099999993" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WrT-6w-Lxq" firstAttribute="leading" secondItem="cZ3-W0-tZq" secondAttribute="leadingMargin" id="8Iz-1r-udN"/>
+                            <constraint firstItem="WrT-6w-Lxq" firstAttribute="top" secondItem="TQK-Ex-ZbO" secondAttribute="bottom" constant="23" id="XE1-QH-8p8"/>
+                            <constraint firstItem="WrT-6w-Lxq" firstAttribute="trailing" secondItem="cZ3-W0-tZq" secondAttribute="trailingMargin" id="puF-bh-rfv"/>
+                            <constraint firstItem="8eO-ZQ-nNh" firstAttribute="top" secondItem="WrT-6w-Lxq" secondAttribute="bottom" constant="243" id="ra7-YF-fwO"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Debt" id="HEJ-VN-Pgq"/>
+                    <connections>
+                        <outlet property="lineChart" destination="WrT-6w-Lxq" id="qAV-pI-xIN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQO-CK-qAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

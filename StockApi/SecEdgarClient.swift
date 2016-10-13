@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Charts
 
 class SecEdgarHelper: NSObject {
     
@@ -102,7 +103,6 @@ class SecEdgarHelper: NSObject {
 
         if let dictionary = parsedResult as? [String: Any] {
             let financialRatio = ParsedFinRatioCompany(dictionary: dictionary)
-            //print(DividendGrowthModel(financialRatio: financialRatio!, dr: 0.10))
             let object = UIApplication.shared.delegate
             let appDelegate = object as! AppDelegate
             appDelegate.companyFin = financialRatio
@@ -165,5 +165,7 @@ class SecEdgarHelper: NSObject {
         }
         return Singleton.sharedInstance
     }
+    
+
 }
 

@@ -22,29 +22,19 @@ class ProfitabilityViewController: UIViewController {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         StockFin = appDelegate.companyFin
+        
+        let GrossMargin = StockFin.GrossMargin
+        print(GrossMargin?.historical)
         //print(GrossMargin)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        setChart()
+        //setChart()
+        ChartHelper.sharedInstance().setChart(company: StockFin.GrossMargin!, label: "Gross Margin", lineChart: lineChart)
     }
 
-    func setChart() {
-        let GrossMargin = StockFin.GrossMargin
-        var dataEntries: [ChartDataEntry] = []
-        var count = 0
-        for (year, value) in (GrossMargin?.historical)!{
-            
-            let dataEntry = ChartDataEntry(x: Double(count), y: value)
-            dataEntries.append(dataEntry)
-            count += 1
-        }
-        
-        let lineChartDataSet = LineChartDataSet(values: dataEntries, label: "Gross Margin")
-        let lineChartData = LineChartData(dataSet: lineChartDataSet)
-        lineChart.data = lineChartData
-    }
+
 
 
 
